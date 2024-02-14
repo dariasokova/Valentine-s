@@ -1,0 +1,16 @@
+
+<%- include('partials/header.ejs') %>
+
+<div class="body">
+ <% if (locals.randomName) { %>
+      <h1><%=randomName%></h1>
+     <% } else {%>
+     <h1>C днем всех влюбленных!</h1>
+     <%};%>
+</div>
+
+<form action="/submit" method="POST">
+  <input type="submit" value="новое пожелание">
+</form>
+
+<%- include('partials/footer.ejs') %>
